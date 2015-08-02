@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerBullet : MonoBehaviour {
+public class Bullet : MonoBehaviour {
 	public int speed = 10;
 	
 	void Start ()
