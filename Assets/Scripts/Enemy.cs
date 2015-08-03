@@ -34,4 +34,14 @@ public class Enemy : MonoBehaviour
 			yield return new WaitForSeconds (spaceship.shotDelay);
 		}
 	}
+
+	// ぶつかった瞬間に呼び出される
+	void OnTriggerEnter2D (Collider2D c)
+	{
+		// 弾の削除
+		Destroy(c.gameObject);
+
+		// プレイヤーを削除
+		Destroy (gameObject);
+	}
 }
