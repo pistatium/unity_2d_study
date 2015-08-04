@@ -35,13 +35,18 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
-	// ぶつかった瞬間に呼び出される
 	void OnTriggerEnter2D (Collider2D c)
 	{
+		// レイヤー名を取得
+		string layerName = LayerMask.LayerToName(c.gameObject.layer);
+		
+		// レイヤー名がBullet (Player)以外の時は何も行わない
+		if( layerName != "Bullet(Player)") return;
+		
 		// 弾の削除
 		Destroy(c.gameObject);
-
-		// プレイヤーを削除
-		Destroy (gameObject);
+		
+		// エネミーの削除
+		Destroy(gameObject);
 	}
 }
