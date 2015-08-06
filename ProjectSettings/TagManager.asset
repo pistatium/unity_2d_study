@@ -18,7 +18,7 @@ TagManager:
   - Bullet(Player)
   - Bullet(Enemy)
   - DestroyArea
-  - 
+  - MovableArea
   - 
   - 
   - 
